@@ -273,6 +273,22 @@
   * Function: (currentPath: [Path](#path), tree: [Tree](#tree), store: [Store](#store)) => [IsDroppable](#isdroppable)
 * 详细: 单个节点是否droppable
 
+## events
+### drag
+* 类型: (store: [Store](#store))
+
+### drop
+* 类型: (store: [Store](#store))
+
+### input
+* 类型: (treeData: [TreeData](#treedata))
+
+### change
+* 类型: ()
+
+### afterPlaceholderCreated
+* 类型: (store: [Store](#store))
+
 ## 工具方法
 ### cloneTreeData
 * 类型: (treeData: [TreeData](#treedata), options: Object) => [TreeData](#treedata)

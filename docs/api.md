@@ -269,6 +269,22 @@ Special properties of nodes in this plugin.
   * Function: (currentPath: [Path](#path), tree: [Tree](#tree), store: [Store](#store)) => [IsDroppable](#isdroppable)
 * Detail: Whether a single node is droppable.
 
+## events
+### drag
+* Type: (store: [Store](#store))
+
+### drop
+* Type: (store: [Store](#store))
+
+### input
+* Type: (treeData: [TreeData](#treedata))
+
+### change
+* Type: ()
+
+### afterPlaceholderCreated
+* Type: (store: [Store](#store))
+
 ## Utils
 ### cloneTreeData
 * Type: (treeData: [TreeData](#treedata), options: Object) => [TreeData](#treedata)
