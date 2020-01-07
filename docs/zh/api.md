@@ -241,16 +241,16 @@ sidebarDepth: 3
 * type: Boolean, default: true
 * 详细: 当拖拽到节点上时, 如果这个节点是折叠的, 是否打开它
 
-### crossTree<Badge text="pro"></Badge>
+### crossTree <Badge text="pro"></Badge>
 * type: [Boolean, Function], default: false
   * Function: (tree: [Tree](#tree), store: [Store](#store)) => Boolean
 * 详细: 是否允许跨树. 跨树拖拽时两棵树都需开启此项.
 
-### maxLevel<Badge text="pro"></Badge>
+### maxLevel <Badge text="pro"></Badge>
 * type: Number
 * 详细: 树允许的最大层级数, 拖拽时以此判断是否可放置.
 
-### cloneWhenDrag<Badge text="pro"></Badge>
+### cloneWhenDrag <Badge text="pro"></Badge>
 * type: Boolean, default: false
 * 详细: 拖拽时克隆节点.
 

@@ -203,13 +203,13 @@ prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个�
 ### 拖拽时打开折叠节点
 当把节点拖动到一个折叠节点上时, 默认会打开此节点以便拖入其中. 可通过prop `unfoldWhenDragover`控制.
 
-### 跨树拖拽<Badge text="pro"></Badge>
+### 跨树拖拽 <Badge text="pro"></Badge>
 给允许跨树拖拽的树传入prop [crossTree](api.md#crosstree). **注意, 允许跨树拽出,拖入的树都要开启才有效.**
 
-### 最大层级<Badge text="pro"></Badge>
+### 最大层级 <Badge text="pro"></Badge>
 传入prop [maxLevel](api.md#maxlevel)将限制树的最大层级数.
 
-### 拖拽时克隆<Badge text="pro"></Badge>
+### 拖拽时克隆 <Badge text="pro"></Badge>
 拖拽时不移动原节点而是克隆一个新节点. 使用prop [cloneWhenDrag](api.md#clonewhendrag)开启.
 
 ## 自定义使用
