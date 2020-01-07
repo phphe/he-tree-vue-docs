@@ -1,6 +1,3 @@
----
-sidebarDepth: 3
----
 # API
 ## 基础树
 ## props
