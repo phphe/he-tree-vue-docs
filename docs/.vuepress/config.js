@@ -2,7 +2,7 @@ module.exports = {
   base: '/he-tree-vue/',
   // ga: 'google analytics ID',
   themeConfig: {
-    sidebarDepth: 1,
+    sidebarDepth: 2,
     locales: {
       '/': {
         label: 'English',
