@@ -336,10 +336,6 @@
   * undefined: 继承父节点
 * 详细: 节点是否可接受被拖拽的节点成为其子节点.
 
-### Store
-* 类型: Object
-* 详细: 本次拖拽过程中的相关数据. 也可通过`tree.treesStore.store`获得.
-
 ### JSX
 * 详细: [Vue JSX](https://vuejs.org/v2/guide/render-function.html).
 
