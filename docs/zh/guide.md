@@ -6,7 +6,6 @@ npm i -P he-tree-vue
 [通过script标签引入](#通过script标签引入)
 ## 简单使用
 ### 导入
-包导出了基础树, 插件和一些方法, 可按需导入
 包拆分为了基础树和插件, 可按需引入. 插件有折叠, 勾选框, 拖拽.
 ```js
 import {Tree, // 基础树
@@ -22,9 +21,9 @@ import 'he-tree-vue/dist/he-tree-vue.css' // 基础样式
 [{text: 'node 1'}, {text: 'node 2', children: [{text: 'node 2-1'}]}]
 ```
 
-可以通过树的[getPureTreeData](api.md#getpuretreedata)方法获取纯净数据(删除$开始的key). 所以使用vuex需额外代码, [使用vuex](#vuex).
+可以通过树的[getPureTreeData](api.md#getpuretreedata)方法获取纯净数据(删除$开始的key).
 ### 节点获取
-通过外部的`path`获取节点. path是数组, 包括节点的父级的索引, 如`[0,0]`, 可以更改`path`和使用树的方法[getNodeByPath](api.md#getnodebypath)获得节点.
+通过外部的`path`获取节点. [Path](api.md#path)是数组, 包括节点的父级的索引, 如`[0,0]`, 可以更改`path`和使用树的方法[getNodeByPath](api.md#getnodebypath)获得节点.
 ### UI结构和css
 ```pug
 .he-tree(data-tree-id={this._uid})
