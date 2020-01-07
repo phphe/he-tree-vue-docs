@@ -189,7 +189,7 @@ In special cases, the clicked element is an input box, a select, or the element 
 `triggerClass` is `tree-node` by default, so clicking anywhere inside the node can trigger dragging except in special cases. Modify `triggerClass` to specify the element that triggers dragging.
 
 ### Controls in the drag and drop process
-prop [eachDraggable](api.md#eachdraggable), [eachDroppable](ap.md#eachdroppable) are hook methods that can globally set whether a single node is draggable, droppable. A single node can be set via its properties [$draggable](api.md#draggable-2), [$droppable](api.md#droppable-2). $draggable, $droppable takes precedence over eachDraggable, eachDroppable. Child nodes inherit the parent's $draggable, $droppable. User `rootNode.$droppable` to set if root droppable.
+prop [eachDraggable](api.md#eachdraggable), [eachDroppable](api.md#eachdroppable) are hook methods that can globally set whether a single node is draggable, droppable. A single node can be set via its properties [$draggable](api.md#draggable-2), [$droppable](api.md#droppable-2). $draggable, $droppable takes precedence over eachDraggable, eachDroppable. Child nodes inherit the parent's $draggable, $droppable. User `rootNode.$droppable` to set if root droppable.
 
 prop [ondragstart](api.md#ondragstart) and [ondragend](api.md#ondragend) are two hook methods. ondragstart is triggered when the drag starts, returning `false` can prevent drag, `ondragstart` is after `eachDraggable` in the source code, so the two are very similar. `ondragend` is triggered when the drag ends, returning` false` prevents the node position from changing.
 

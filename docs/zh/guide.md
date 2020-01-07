@@ -187,7 +187,7 @@ export default {
 
 `triggerClass`默认是`tree-node`, 所以点击节点内任何地方, 除特殊情况, 都可触发拖拽. 修改`triggerClass`, 可指定触发拖拽的元素.
 ### 拖拽流程中的控制
-prop [eachDraggable](api.md#eachdraggable), [eachDroppable](ap.md#eachdroppable) 是钩子方法, 可以全局设定单个节点是否draggable, droppable. 单个节点可通过[$draggable](api.md#draggable-2), [$droppable](api.md#droppable-2)属性控制. $draggable, $droppable优先级高于eachDraggable, eachDroppable. 子节点会继承父级的$draggable, $droppable. 虚拟根节点对象[rootNode](api.md#rootnode)的$droppable指其他节点是否可成为根节点的子级.
+prop [eachDraggable](api.md#eachdraggable), [eachDroppable](api.md#eachdroppable) 是钩子方法, 可以全局设定单个节点是否draggable, droppable. 单个节点可通过[$draggable](api.md#draggable-2), [$droppable](api.md#droppable-2)属性控制. $draggable, $droppable优先级高于eachDraggable, eachDroppable. 子节点会继承父级的$draggable, $droppable. 虚拟根节点对象[rootNode](api.md#rootnode)的$droppable指其他节点是否可成为根节点的子级.
 
 prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个钩子方法. ondragstart拖拽开始时触发, 返回`false`可阻止拖拽, `ondragstart`在源码中是在`eachDraggable`后面, 两个很类似. `ondragend`拖拽结束时触发, 返回`false`可阻止节点位置改变.
 
