@@ -1,0 +1,25 @@
+{
+  "name": "he-tree-vue-docs",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "vuepress build docs",
+    "dev": "vuepress dev docs"
+  },
+  "author": "phphe <phphe@outlook.com> (https://github.com/phphe)",
+  "bugs": {
+    "url": "https://github.com/phphe/he-tree-vue-docs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phphe/he-tree-vue-docs.git"
+  },
+  "devDependencies": {
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0"
+  },
+  "dependencies": {},
+  "license": "MIT"
+}
