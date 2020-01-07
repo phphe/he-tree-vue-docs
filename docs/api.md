@@ -319,7 +319,25 @@ Special properties of nodes in this plugin.
 
 ### Store
 * Type: Object
-* Detail: Related data during this dragging process. Also available through `tree.treesStore.store`.
+  * {HTMLElement} el: the moving el
+  * {HTMLElement} originalEl: the original moving el, used when clone
+  * {Object: {x, y}} mouse: the mouse position
+  * {Number} movedCount: the moved times
+  * {Event} startEvent: mousedown or touchstart event
+  * {Event} endEvent: mouseup or touchend event
+  * {HTMLElement} startTreeEl
+  * {vm} startTree
+  * {[Path](#path)} startPath
+  * {HTMLElement} dragBranchEl
+  * {[Node](#node)} dragNode
+  * {HTMLElement} targetTreeEl
+  * {vm} targetTree
+  * {[Path](#path)} targetPath
+  * {Boolean} targetPathNotEqualToStartPath
+  * {HTMLElement} placeholder
+  * {Boolean} pathChangePrevented: if path change be prevented by hooks.
+  * {Boolean} pathChanged: Whether the path changes in the end.
+* Detail: Related data during this dragging process. Created when drag start, destroyed when drag end. Also available through `tree.treesStore.store`.
 
 ### IsDraggable
 * Type: [Boolean, undefined]

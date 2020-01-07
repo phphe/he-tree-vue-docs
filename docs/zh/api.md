@@ -324,7 +324,25 @@
 
 ### Store
 * 类型: Object
-* 详细: 本次拖拽过程中的相关数据. 也可通过`tree.treesStore.store`获得.
+  * {HTMLElement} el: 拖动的元素
+  * {HTMLElement} originalEl: 原始拖动的元素, 克隆模式时有用
+  * {Object: {x, y}} mouse: 鼠标位置
+  * {Number} movedCount: 移动次数
+  * {Event} startEvent: mousedown 或 touchstart 事件
+  * {Event} endEvent: mouseup 或 touchend event 事件
+  * {HTMLElement} startTreeEl
+  * {vm} startTree
+  * {[Path](#path)} startPath
+  * {HTMLElement} dragBranchEl
+  * {[Node](#node)} dragNode
+  * {HTMLElement} targetTreeEl
+  * {vm} targetTree
+  * {[Path](#path)} targetPath
+  * {Boolean} targetPathNotEqualToStartPath: 初始位置和目标位置是否不同(位置是否改变)
+  * {HTMLElement} placeholder
+  * {Boolean} pathChangePrevented: 拖拽结束, 节点的位置改变是否被(钩子)阻止.
+  * {Boolean} pathChanged: 最终节点的位置是否改变
+* 详细: 本次拖拽过程中的相关数据. 拖动开始时创建, 结束后销毁. 也可通过`tree.treesStore.store`获得.
 
 ### IsDraggable
 * 类型: [Boolean, undefined]
