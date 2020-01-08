@@ -65,7 +65,7 @@ export default {
 }
 </script>
 ```
-<Demo1Easiest/>
+<ClientOnly><Demo1Easiest/></ClientOnly>
 
 ### 通过default slot自定义显示
 ```vue
@@ -93,7 +93,7 @@ export default {
 }
 </script>
 ```
-<Demo2CustomSlot/>
+<ClientOnly><Demo2CustomSlot/></ClientOnly>
 
 ## 插件
 插件其实也是Vue组件写法, 所以混合基础树和插件就可以了. 使用[Tree.mixPlugins](api.md#mixplugins)方法更方便.
@@ -124,7 +124,7 @@ export default {
 }
 </script>
 ```
-<Demo3Fold/>
+<ClientOnly><Demo3Fold/></ClientOnly>
 
 传入`foldAllAfterMounted`使树默认折叠. 传入`foldingTransitionName`设置折叠/展开节点列表的transition名. 也可通过`foldingTransition`传入你的transition组件. 参考[Vue transition](https://cn.vuejs.org/v2/guide/transitions.html).
 
@@ -153,12 +153,12 @@ export default {
 }
 </script>
 ```
-<Demo4Check/>
+<ClientOnly><Demo4Check/></ClientOnly>
 
 注意不能使用`v-model`绑定`node.$checked`, 否则会改变两次, 相当于没改变.
 
 ## 拖拽插件
-<Demo5Draggable/>
+<ClientOnly><Demo5Draggable/></ClientOnly>
 
 ```vue
 <!-- Demo5Draggable.vue -->
@@ -222,7 +222,7 @@ prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个�
 
 也可以用另一个组件把树组件包装起来使用, 这样自定义模板更方便, 但不能直接访问树的vm实例.
 
-<Demo6Custom style="max-width: 500px;" />
+<ClientOnly><Demo6Custom style="max-width: 500px;" /></ClientOnly>
 
 [此demo源码](/source.md#demo6)
 

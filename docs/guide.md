@@ -65,7 +65,7 @@ export default {
 }
 </script>
 ```
-<Demo1Easiest/>
+<ClientOnly><Demo1Easiest/></ClientOnly>
 
 ### Custom display through default slot
 ```vue
@@ -93,7 +93,7 @@ export default {
 }
 </script>
 ```
-<Demo2CustomSlot/>
+<ClientOnly><Demo2CustomSlot/></ClientOnly>
 
 ## Plugin
 The plugin is Vue component, so just mixin the base tree and plugins. Use [Tree.mixPlugins](api.md#mixplugins) method is more convenient.
@@ -124,7 +124,7 @@ export default {
 }
 </script>
 ```
-<Demo3Fold/>
+<ClientOnly><Demo3Fold/></ClientOnly>
 
 Pass `foldAllAfterMounted` to make the tree collapse by default. Pass` foldingTransitionName` to set the transition name of the folding/expanding node list. You can also pass your transition component via `foldingTransition`. See [Vue transition](https://vuejs.org/v2/guide/transitions.html).
 
@@ -153,12 +153,12 @@ export default {
 }
 </script>
 ```
-<Demo4Check/>
+<ClientOnly><Demo4Check/></ClientOnly>
 
 Note: don't bind `node.$checked` with `v-model`, otherwise it will change twice, which is equivalent to no change
 
 ## Draggable Plugin
-<Demo5Draggable/>
+<ClientOnly><Demo5Draggable/></ClientOnly>
 
 ```vue
 <!-- Demo5Draggable.vue -->
@@ -225,7 +225,7 @@ The disadvantage of using the inheritance function is that it is difficult to mo
 
 You can also use another component to wrap and use the tree component, so that custom templates are more convenient, but you cannot directly access the tree's vm instance.
 
-<Demo6Custom style="max-width: 500px;" />
+<ClientOnly><Demo6Custom style="max-width: 500px;" /></ClientOnly>
 
 [Source of the demo](/source.md#demo6)
 
