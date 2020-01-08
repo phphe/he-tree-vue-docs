@@ -1,9 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  base: '/he-tree-vue/',
-  // ga: 'google analytics ID',
+  base: '/',
+  ga: 'UA-155723570-1',
   themeConfig: {
+    repo: 'phphe/he-tree-vue',
+    docsRepo: 'phphe/he-tree-vue-docs',
+    docsDir: 'docs',
+    editLinks: true,
     sidebarDepth: 2,
     locales: {
       '/': {
@@ -19,7 +23,6 @@ module.exports = {
           {text: 'API',link: '/api'},
           {text: 'Buy Pro',link: '/buy_pro'},
           {text: 'Donate',link: '/donate'},
-          {text: 'Github',link: 'todo'},
         ],
       },
       '/zh/': {
@@ -37,7 +40,6 @@ module.exports = {
           {text: 'API',link: '/zh/api'},
           {text: '购买Pro',link: '/zh/buy_pro'},
           {text: '打赏',link: '/zh/donate'},
-          {text: 'Github',link: 'todo'},
         ],
       },
     },

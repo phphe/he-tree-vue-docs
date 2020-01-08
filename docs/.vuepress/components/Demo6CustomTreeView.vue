@@ -33,9 +33,9 @@ export default {
         <button class="mrs drag-trigger">Drag</button>
         <button class="mrs fold-btn" onClick={() => tree.toggleFold(node, path)}>{node.$folded ? '+' : '-'}</button>
         {original()}
-        <button class="mls">edit</button>
+        <button class="mls" onClick={() => this.edit(node)}>edit</button>
         <button class="mls" onClick={() => this.removeNodeByPath(path)}>remove</button>
-        <button class="mls" onClick={() => this.hideNode(node)}>hidden</button>
+        <button class="mls" onClick={() => this.hideNode(node)}>hide</button>
       </div>
     },
     blockHeader() {
@@ -44,7 +44,7 @@ export default {
           <button onClick={this.add}>add</button>
           <button onClick={this.showHidden} class="mls">show hidden</button>
         </div>
-        <input onKeydown={(e) => e.key === 'Enter' && this.search(e)} placeholder="Search"  />
+        <input onInput={(e) => this.search(e)} placeholder="Search"  />
       </div>
     },
     blockFooter() {
@@ -55,6 +55,9 @@ export default {
     //
     add() {
       this.treeData.push({text: `node ${hp.strRand(3).toLowerCase()}`})
+    },
+    edit(node) {
+      node.text = window.prompt('Edit node', node.text)
     },
     showHidden() {
       this.walkTreeData((node) => {

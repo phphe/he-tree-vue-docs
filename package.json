@@ -1,6 +1,6 @@
 {
   "name": "he-tree-vue-docs",
-  "version": "0.0.1",
+  "version": "1.0.0-beta",
   "description": "",
   "scripts": {
     "build": "vuepress build docs",
