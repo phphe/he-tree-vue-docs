@@ -20,6 +20,8 @@
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "he-tree-vue": "^1.0.0-beta"
+  },
   "license": "MIT"
 }

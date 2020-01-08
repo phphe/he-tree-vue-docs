@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   base: '/',
-  ga: 'UA-155723570-1',
   themeConfig: {
     repo: 'phphe/he-tree-vue',
     docsRepo: 'phphe/he-tree-vue-docs',

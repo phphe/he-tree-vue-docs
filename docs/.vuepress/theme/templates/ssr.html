@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>{{ title }}</title>
+ <meta name="description" content="{{ description }}">
+ {{{ userHeadTags }}}
+ {{{ pageMeta }}}
+ {{{ renderResourceHints() }}}
+ {{{ renderStyles() }}}
+</head>
+<body>
+ <!--vue-ssr-outlet-->
+ {{{ renderScripts() }}}
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155723570-1"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'UA-155723570-1');
+ </script>
+</body>
+</html>
