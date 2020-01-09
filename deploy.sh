@@ -8,6 +8,8 @@ npm run build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
+# custom domain
+echo "he-tree-vue.phphe.com" > CNAME
 
 git init
 git add -A
