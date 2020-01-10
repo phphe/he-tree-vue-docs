@@ -1,6 +1,6 @@
 {
   "name": "he-tree-vue-docs",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "build": "vuepress build docs",
@@ -21,7 +21,7 @@
     "sass-loader": "^8.0.0"
   },
   "dependencies": {
-    "he-tree-vue": "^1.0.0-beta"
+    "he-tree-vue": "^1.0.0"
   },
   "license": "MIT"
 }
