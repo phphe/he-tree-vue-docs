@@ -21,7 +21,9 @@
     "sass-loader": "^8.0.0"
   },
   "dependencies": {
-    "he-tree-vue": "^1.0.2"
+    "autotrack": "^2.4.1",
+    "he-tree-vue": "^1.0.2",
+    "scriptjs": "^2.5.9"
   },
   "license": "MIT"
 }
