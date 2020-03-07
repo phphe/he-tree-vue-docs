@@ -126,7 +126,15 @@ export default {
 ```
 <ClientOnly><Demo3Fold/></ClientOnly>
 
-Pass `foldAllAfterMounted` to make the tree collapse by default. Pass` foldingTransitionName` to set the transition name of the folding/expanding node list. You can also pass your transition component via `foldingTransition`. See [Vue transition](https://vuejs.org/v2/guide/transitions.html).
+Pass` foldingTransitionName` to set the transition name of the folding/expanding node list. You can also pass your transition component via `foldingTransition`. See [Vue transition](https://vuejs.org/v2/guide/transitions.html).
+
+If treeData is passed before tree inited, use `foldAllAfterMounted` to make the tree all nodes folded by default. If treeData is passed after tree inited, use util function [`foldAll`](api.md#foldAll-2) like follow:
+```js
+import {foldAll} from 'he-tree-vue'
+...
+this.mytreedata = mytreedata // add data to vue instance first
+foldAll(this.mytreedata)
+```
 
 ## Check Plugin
 ```vue
@@ -248,3 +256,6 @@ Download the latest version from github or npm, impoty dist/he-tree-vue.js or di
   var Fold = heTreeVue.Fold;
 </script>
 ```
+
+## typescript
+It cantains typescript description files. There is a demo: [vue-cli-typescript-he-tree-test](https://github.com/phphe/vue-cli-typescript-he-tree-test)

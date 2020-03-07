@@ -22,6 +22,7 @@ module.exports = {
           {text: 'API',link: '/api'},
           {text: 'Buy Pro',link: '/buy_pro'},
           {text: 'Donate',link: '/donate'},
+          {text: 'Blog',link: 'https://phphe.com'},
         ],
       },
       '/zh/': {
@@ -39,6 +40,7 @@ module.exports = {
           {text: 'API',link: '/zh/api'},
           {text: '购买Pro',link: '/zh/buy_pro'},
           {text: '打赏',link: '/zh/donate'},
+          {text: '博客',link: 'https://phphe.com'},
         ],
       },
     },

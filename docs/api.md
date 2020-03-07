@@ -305,6 +305,14 @@ Special properties of nodes in this plugin.
 * Type: (treeData: [TreeData](#treedata)) => [PureTreeData](#puretreedata)
 * Type: (node: [Node](#node)) => [PureNode](#purenode)
 
+### foldAll
+* Type: (treeData: [TreeData](#treedata))
+* Detail: walk treeData and fold all. Make sure the data is reactive before do this.
+
+### unfoldAll
+* Type: (treeData: [TreeData](#treedata))
+* Detail: walk treeData and unfold all. Make sure the data is reactive before do this.
+
 ## Others
 ## Data Types
 ### TreeData

@@ -310,6 +310,14 @@
 * 类型: (node: [Node](#node)) => [PureNode](#purenode)
 * 详细: 获得纯净的树形数据
 
+### foldAll
+* 类型: (treeData: [TreeData](#treedata))
+* 详细: 遍历给定数据并全部折叠. 在此之前确认数据已挂载到vue上.
+
+### unfoldAll
+* 类型: (treeData: [TreeData](#treedata))
+* 详细: 遍历给定数据并全部展开. 在此之前确认数据已挂载到vue上.
+
 ## 其他
 ## 数据类型
 ### TreeData

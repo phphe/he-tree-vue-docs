@@ -126,7 +126,15 @@ export default {
 ```
 <ClientOnly><Demo3Fold/></ClientOnly>
 
-传入`foldAllAfterMounted`使树默认折叠. 传入`foldingTransitionName`设置折叠/展开节点列表的transition名. 也可通过`foldingTransition`传入你的transition组件. 参考[Vue transition](https://cn.vuejs.org/v2/guide/transitions.html).
+传入`foldingTransitionName`设置折叠/展开节点列表的transition名. 也可通过`foldingTransition`传入你的transition组件. 参考[Vue transition](https://cn.vuejs.org/v2/guide/transitions.html).
+
+如果数据在树初始化前传入, 则配置`foldAllAfterMounted`将使树默认折叠. 如果数据在树初始化之后传入而想树默认折叠的话, 使用辅助方法[`foldAll`](api.md#foldAll-2)如下:
+```js
+import {foldAll} from 'he-tree-vue'
+...
+this.mytreedata = mytreedata // 首先挂载数据到vue上
+foldAll(this.mytreedata)
+```
 
 ## 勾选框插件
 ```vue
@@ -245,3 +253,6 @@ prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个�
   var Fold = heTreeVue.Fold;
 </script>
 ```
+
+## typescript
+项目包含typescript描述文件. 这里是一个vue cli + typescript + he-tree-vue demo: [vue-cli-typescript-he-tree-test](https://github.com/phphe/vue-cli-typescript-he-tree-test)
