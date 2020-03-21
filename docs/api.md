@@ -23,6 +23,10 @@
 * Type: String
 * Detail: Add class name to the top level of the tree. When using extends or mixins, you can customize the top level class without changing the template.
 
+### treeId
+* Type: String
+* Detail: Random string. Available after mounted.
+
 ## computed
 ### treeData
 * Detail: Alias of [value](#value).

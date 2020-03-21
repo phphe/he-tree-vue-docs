@@ -23,6 +23,10 @@
 * 类型: String
 * 详细: 给树的顶层的添加class名. 当通过extends或mixins使用时, 可以不更改模板而自定义顶层class.
 
+### treeId
+* 类型: String
+* 详细: 随机字符串. mounted之后才可用.
+
 ## computed
 ### treeData
 * 详细: [value](#value)的别名

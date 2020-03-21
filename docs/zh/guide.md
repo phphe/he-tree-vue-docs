@@ -26,7 +26,7 @@ import 'he-tree-vue/dist/he-tree-vue.css' // 基础样式
 通过外部的`path`获取节点. [Path](api.md#path)是数组, 包括节点的父级的索引, 如`[0,0]`, 可以更改`path`和使用树的方法[getNodeByPath](api.md#getnodebypath)获得节点.
 ### UI结构和css
 ```pug
-.he-tree(data-tree-id={this._uid})
+.he-tree(data-tree-id={this.treeId})
   .tree-children.tree-root
     .tree-branch(data-tree-node-path="0")
       .tree-node-back(style="padding-left: '0px';")

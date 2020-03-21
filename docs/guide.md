@@ -26,7 +26,7 @@ You can use the [getPureTreeData](api.md#getpuretreedata) method of the tree to 
 Get the node through the `path`. [Path](api.md#path) is an array, including the index of the parent of the node, such as` [0,0] `. You can change` path` and use the tree method [getNodeByPath](api.md#getnodebypath) Get node
 ### UI Structure and CSS
 ```pug
-.he-tree(data-tree-id={this._uid})
+.he-tree(data-tree-id={this.treeId})
   .tree-children.tree-root
     .tree-branch(data-tree-node-path="0")
       .tree-node-back(style="padding-left: '0px';")
