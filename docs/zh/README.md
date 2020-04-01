@@ -7,6 +7,7 @@ editLink: false
 <hr/>
 [查看教程](./guide.md)
 
+* [重要, 正确配置编译](./transpile.md)
 * [Vue cli demo](https://codesandbox.io/s/vue-cli-and-he-tree-vue-example-k2d11)
 * [UMD demo(浏览器引入, 支持IE10)](https://jsfiddle.net/phphe/7zy4wvg6/12/)
 

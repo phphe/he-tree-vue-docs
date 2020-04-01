@@ -14,6 +14,7 @@ module.exports = {
         sidebar: [
           '/guide',
           '/api',
+          '/transpile',
           '/buy_pro',
           '/donate',
         ],
@@ -32,6 +33,7 @@ module.exports = {
         sidebar: [
           '/zh/guide',
           '/zh/api',
+          '/zh/transpile',
           '/zh/buy_pro',
           '/zh/donate',
         ],
