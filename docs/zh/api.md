@@ -242,6 +242,14 @@
 * type: Boolean, default: true
 * 详细: 当拖拽到节点上时, 如果这个节点是折叠的, 是否打开它
 
+### unfoldWhenDragoverDelay
+* type: Number, default: 30, 单位: 毫秒
+* 详细: 当拖拽到节点上时, 如果这个节点是折叠的, 停顿多少毫秒才打开它
+
+### draggingNodePositionMode
+* type: 'top_left_corner'|'mouse', default: 'top_left_corner'
+* 详细: 如何定位拖拽节点. top_left_corner: 拖拽节点左上角; mouse: 鼠标位置
+
 ### crossTree <Badge text="pro"></Badge>
 * type: [Boolean, Function], default: false
   * Function: (tree: [Tree](#tree), store: [Store](#store)) => Boolean

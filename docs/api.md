@@ -239,6 +239,14 @@ Special properties of nodes in this plugin.
 * Type: Boolean, default: true
 * Detail: When dragging over a node, whether to open it if the node is folded.
 
+### unfoldWhenDragoverDelay
+* Type: Number, default: 30, unit: millisecond
+* Detail: When dragging over a folded node, wait some milliseconds before open it.
+
+### draggingNodePositionMode
+* Type: 'top_left_corner'|'mouse', default: 'top_left_corner'
+* Detail: How to locate the dragging node. top_left_corner: the top left corner of dragging node; mouse: mouse position
+
 ### crossTree <Badge text="pro"></Badge>
 * Type: [Boolean, Function], default: false
   * Function: (tree: [Tree](#tree), store: [Store](#store)) => Boolean

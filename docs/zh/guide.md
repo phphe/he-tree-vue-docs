@@ -128,7 +128,7 @@ export default {
 
 传入`foldingTransitionName`设置折叠/展开节点列表的transition名. 也可通过`foldingTransition`传入你的transition组件. 参考[Vue transition](https://cn.vuejs.org/v2/guide/transitions.html).
 
-如果数据在树初始化前传入, 则配置`foldAllAfterMounted`将使树默认折叠. 如果数据在树初始化之后传入而想树默认折叠的话, 使用辅助方法[`foldAll`](api.md#foldAll-2)如下:
+如果数据在树初始化前传入, 则配置`foldAllAfterMounted`将使树默认折叠. 如果数据在树初始化之后传入而想树默认折叠的话, 使用辅助方法[`foldAll`](api.md#foldall-2)如下:
 ```js
 import {foldAll} from 'he-tree-vue'
 ...
@@ -208,7 +208,10 @@ prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个�
 拖拽时, 会生成一个元素默认淡青色背景, 用以标识可放置的位置. 此节点生成时会触发`afterPlaceholderCreated`, 如果想操作此元素比如添加文字, 只能通过原生js操作.
 
 ### 拖拽时打开折叠节点
-当把节点拖动到一个折叠节点上时, 默认会打开此节点以便拖入其中. 可通过prop `unfoldWhenDragover`控制.
+当把节点拖动到一个折叠节点上时, 默认会打开此节点以便拖入其中. 可通过prop `unfoldWhenDragover`控制. 相关prop: [unfoldWhenDragoverDelay](api.md#unfoldwhendragoverdelay)
+
+### 拖拽节点的定位
+默认使用拖拽节点的左上角坐标来定位, 也可以设置使用鼠标位置来定位. [draggingNodePositionMode](api.md#draggingnodepositionmode)
 
 ### 跨树拖拽 <Badge text="pro"></Badge>
 给允许跨树拖拽的树传入prop [crossTree](api.md#crosstree). **注意, 允许跨树拽出,拖入的树都要开启才有效.**

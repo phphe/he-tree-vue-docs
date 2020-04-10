@@ -128,7 +128,7 @@ export default {
 
 Pass` foldingTransitionName` to set the transition name of the folding/expanding node list. You can also pass your transition component via `foldingTransition`. See [Vue transition](https://vuejs.org/v2/guide/transitions.html).
 
-If treeData is passed before tree inited, use `foldAllAfterMounted` to make the tree all nodes folded by default. If treeData is passed after tree inited, use util function [`foldAll`](api.md#foldAll-2) like follow:
+If treeData is passed before tree inited, use `foldAllAfterMounted` to make the tree all nodes folded by default. If treeData is passed after tree inited, use util function [`foldAll`](api.md#foldall-2) like follow:
 ```js
 import {foldAll} from 'he-tree-vue'
 ...
@@ -210,7 +210,10 @@ At the beginning of the drag, an object [store](api.md#store) is created, and it
 When dragging, an element will be generated with a default light cyan background to identify the place where can be dropped. This node will emit `afterPlaceholderCreated` event when it is created. If you want to manipulate this element such as adding text, you can only use native JS operations.
 
 ### Open folded node when dragging
-When dragging a node over a collapsed node, this node is opened by default for dragging into it. It can be controlled by prop `unfoldWhenDragover`.
+When dragging a node over a collapsed node, this node is opened by default for dragging into it. It can be controlled by prop `unfoldWhenDragover`. Related prop: [unfoldWhenDragoverDelay](api.md#unfoldwhendragoverdelay)
+
+### How to locate the dragging node
+The top left corner of dragging node is used by default. Mouse position is also supported. [draggingNodePositionMode](api.md#draggingnodepositionmode)
 
 ### Drag across trees <Badge text="pro"></Badge>
 Pass prop [crossTree](api.md#crosstree) to the tree that allows cross-tree dragging. **Note that both start tree and target tree need enable it.**
