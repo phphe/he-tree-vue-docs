@@ -192,6 +192,11 @@
 * 类型: () => undefined
 * 详细: 打开所有节点.
 
+## events
+### nodeFoldedChanged
+* 类型: (node: [Node](#node))
+* 详细: 节点被打开或折叠.
+
 ## 勾选框插件
 ## methods
 ### check

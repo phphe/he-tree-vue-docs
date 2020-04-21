@@ -190,6 +190,11 @@ Special properties of nodes in this plugin.
 ### unfoldAll
 * Type: () => undefined
 
+## events
+### nodeFoldedChanged
+* Type: (node: [Node](#node))
+* Detail: Triggered when node is folded or unfolded.
+
 ## Check Plugin
 ## methods
 ### check
