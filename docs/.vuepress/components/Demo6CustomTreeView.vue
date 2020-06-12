@@ -54,7 +54,7 @@ export default {
     },
     //
     add() {
-      this.treeData.push({text: `node ${hp.strRand(3).toLowerCase()}`})
+      this.treeData.push({text: `node ${hp.randString(3).toLowerCase()}`})
     },
     edit(node) {
       node.text = window.prompt('Edit node', node.text)
@@ -94,6 +94,7 @@ export default {
 .my-tree-view1 .node-content .fold-btn{
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 22px;
   border-radius: 100%;
   border: none;

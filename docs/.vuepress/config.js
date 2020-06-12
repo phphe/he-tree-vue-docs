@@ -17,13 +17,21 @@ module.exports = {
           '/transpile',
           '/buy_pro',
           '/donate',
+          '/migration_guide',
         ],
         nav: [
           {text: 'Guide',link: '/guide'},
           {text: 'API',link: '/api'},
           {text: 'Buy Pro',link: '/buy_pro'},
-          {text: 'Donate',link: '/donate'},
-          {text: 'Blog',link: 'https://phphe.com'},
+          // {text: 'Donate',link: '/donate'},
+          // {text: 'Blog',link: 'https://phphe.com'},
+          {
+            text: 'Old Versions',
+            items: [
+              { text: 'v1 Guide', link: '/v1/guide' },
+              { text: 'v1 API', link: '/v1/api' },
+            ]
+          },
         ],
       },
       '/zh/': {
@@ -36,13 +44,21 @@ module.exports = {
           '/zh/transpile',
           '/zh/buy_pro',
           '/zh/donate',
+          '/zh/migration_guide',
         ],
         nav: [
           {text: '教程',link: '/zh/guide'},
           {text: 'API',link: '/zh/api'},
           {text: '购买Pro',link: '/zh/buy_pro'},
-          {text: '打赏',link: '/zh/donate'},
-          {text: '博客',link: 'https://phphe.com'},
+          // {text: '打赏',link: '/zh/donate'},
+          // {text: '博客',link: 'https://phphe.com'},
+          {
+            text: '旧版本',
+            items: [
+              { text: 'v1 教程', link: '/zh/v1/guide' },
+              { text: 'v1 API', link: '/zh/v1/api' },
+            ]
+          },
         ],
       },
     },
@@ -56,7 +72,7 @@ module.exports = {
     '/zh/': {
       lang: 'zh-CN',
       title: 'he-tree-vue',
-      description: '可拖拽可排序vue树组件.'
+      description: '可拖拽可排序vue树形组件.'
     }
   },
   configureWebpack: {

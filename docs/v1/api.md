@@ -1,4 +1,4 @@
-# API
+# API <Badge text="v1"></Badge>
 ## Base Tree
 ## props
 ### value
@@ -9,10 +9,6 @@
 ### indent
 * Type: Number, default: 20
 * Detail: Indentation, unit is `px`.
-
-### rtl
-* Type: boolean
-* Detail: Support right to left display and drag.
 
 ### rootNode
 * Type: [Node](#node), default: {}
@@ -216,10 +212,6 @@ Special properties of nodes in this plugin.
 * Type: String, default: 'tree-node'
 * Detail: `class` of the element which trigger drag.
 
-### triggerBySelf
-* Type: Boolean, default: false
-* Detail: Prevent child elements from triggering drag.
-
 ### draggable
 * Type: [Boolean, (tree: [Tree](#tree), store: [Store](#store)) => [IsDraggable](#isdraggable)], default: true
 * Detail: Enable drag.
@@ -260,22 +252,6 @@ Special properties of nodes in this plugin.
 * Type: 'top_left_corner'|'mouse', default: 'top_left_corner'
 * Detail: How to locate the dragging node. top_left_corner: the top left corner of dragging node; mouse: mouse position
 
-### edgeScroll
-* Type: Boolean
-* Detail: Enable edge scroll.
-
-### edgeScrollTriggerMargin
-* Type: Number, default: 50
-* Detail: The margin to trigger edge scroll.
-
-### edgeScrollSpeed
-* Type: Number, default: 0.35
-* Detail: The scroll speed.
-
-### edgeScrollTriggerMode
-* Type: 'top_left_corner'|'mouse', default: 'top_left_corner'
-* Detail: How to trigger edge scroll. top_left_corner: triggered by the top left corner; mouse: triggered by the mouse position.
-
 ### crossTree <Badge text="pro"></Badge>
 * Type: [Boolean, Function], default: false
   * Function: (tree: [Tree](#tree), store: [Store](#store)) => Boolean
@@ -314,9 +290,6 @@ Special properties of nodes in this plugin.
 ### drag
 * Type: (store: [Store](#store))
 
-### before-drop
-* Type: (store: [Store](#store))
-
 ### drop
 * Type: (store: [Store](#store))
 
@@ -324,7 +297,7 @@ Special properties of nodes in this plugin.
 * Type: (treeData: [TreeData](#treedata))
 
 ### change
-* Type: (store: [Store](#store))
+* Type: ()
 
 ### afterPlaceholderCreated
 * Type: (store: [Store](#store))
@@ -387,12 +360,9 @@ Special properties of nodes in this plugin.
 
 ### Store
 * Type: Object
-  * {HTMLElement} listenerElement: Elements bound to event listeners
-  * {HTMLElement} directTriggerElement: The element triggered event directly.
-  * {HTMLElement} triggerElement: The element allowed to trigger event. Maybe the parent of directTriggerElement.
-  * {HTMLElement} movedElement: the moving el
-  * {HTMLElement} movedOrClonedElement: the original moving el, used when clone
-  * {Object: {x, y}} mouse: the mouse position, relative to viewport.
+  * {HTMLElement} el: the moving el
+  * {HTMLElement} originalEl: the original moving el, used when clone
+  * {Object: {x, y}} mouse: the mouse position
   * {Number} movedCount: the moved times
   * {Event} startEvent: mousedown or touchstart event
   * {Event} endEvent: mouseup or touchend event

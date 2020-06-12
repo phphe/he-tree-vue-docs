@@ -2,7 +2,10 @@
 editLink: false
 ---
 # Buy Pro
-he-tree-vue follows the MIT license and you can use it for free. he-tree-vue-pro is commercial software and contains several advanced features: cross-tree dragging, maximum level, clone when dragging. If you need, please purchase he-tree-vue-pro. Please fill in your email and name when you purchase, once you purchase, the relevant documents will be sent to you within 24 hours. You can also receive new versions in the future.
+he-tree-vue follows the MIT license and you can use it for free. he-tree-vue-pro is commercial plugin and contains several advanced features: cross-tree dragging, maximum level, clone when dragging. If you need, please purchase he-tree-vue-pro. Please fill in your email and name when you purchase, once you purchase, the relevant documents will be sent to you within 24 hours. You can also receive new versions in the future.
+
+Some customers report that they did not receive the first email. You can <a href="mailto:phphe@outlook.com?
+		subject=he-tree-vue-pro purchased&body=Please send it to me as soon as possible.">click here</a> to send me an email first when you purchased, and then I will reply to you.
 
 ## Licenses
 ### Regular License

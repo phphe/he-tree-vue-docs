@@ -2,7 +2,10 @@
 editLink: false
 ---
 # 购买Pro
-he-tree-vue遵循MIT协议, 您可以免费使用. he-tree-vue-pro是商业软件, 包含几个高级功能: 跨树拖拽, 最大层级, 拖拽时克隆. 如果您有需要, 请购买he-tree-vue-pro. 购买时请填写您的邮箱和名字, 一旦您购买, 相关文件会在24小时内发送给您. 购买后, 如果有更新, 您也会收到全新版本.
+he-tree-vue遵循MIT协议, 保留版权即可自由使用. he-tree-vue-pro是一个付费插件, 包含几个高级功能: 跨树拖拽, 最大层级, 拖拽时克隆. 如果您有需要, 请购买he-tree-vue-pro. 购买时请填写您的邮箱和名字, 一旦您购买, 相关文件会在24小时内发送给您. 购买后, 如果有更新, 您也会收到全新版本.
+
+有客户反映收不到第一封邮件. 你可以购买后<a href="mailto:phphe@outlook.com?
+		subject=he-tree-vue-pro purchased&body=Please send it to me as soon as possible.">点击这里</a>先给我发送一封邮件, 然后我将回复你.
 
 ## 许可证
 ### Regular License

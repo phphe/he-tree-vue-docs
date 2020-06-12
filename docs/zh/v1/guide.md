@@ -1,30 +1,30 @@
-# 教程
+# 教程 <Badge text="v1"></Badge>
 ## 安装
 ```sh
 npm i -P he-tree-vue
 ```
 [通过script标签引入](#通过script标签引入)
-
-## 导入
+## 简单使用
+### 导入
 包拆分为了基础树和插件, 可按需引入. 插件有折叠, 勾选框, 拖拽.
 ```js
 import {Tree, // 基础树
   Fold, Check, Draggable, // 插件: 折叠, 勾选框, 拖拽
-  foldAll, unfoldAll, cloneTreeData, walkTreeData, getPureTreeData, //方法
+  cloneTreeData, walkTreeData, getPureTreeData, //方法
 } from 'he-tree-vue'
 import 'he-tree-vue/dist/he-tree-vue.css' // 基础样式
 ```
-包只有几个简单的css. 折叠和勾选框插件只有功能函数, 没有UI, 需要额外附加. Tree组件有默认插槽可自定义节点UI, 未传入时默认显示`node.text`. 如果你创建一个组件继承于Tree, 还可以用`jsx`和钩子函数自定义模板. 此教程会列出许多用法demo和源码.
-## 数据结构
+包只有几个简单的css. 折叠和勾选框插件只有功能函数, 没有UI, 需要额外附加. Tree组件有默认插槽可自定义节点UI, 未传入时默认显示`node.text`. 一般来说, 你需要创建一个组件继承于Tree, 然后自定义UI, css, 还可以用`jsx`和钩子函数自定义模板. 此教程会列出许多用法demo和源码.
+### 数据结构
 通过prop `value`传入数据, 树的内部value有别名`treeData`. 数据是数组, 子树的key是`children`. 树会直接改变节点和数据结构, 比如折叠插件或给节点增加`$folded`属性, 这些附加的属性的key都会以`$`开始. 也可以给节点添加`$`开始的属性来添加设置. 节点的[$hidden](api.md#hidden)属性可以控制节点的显示. 那么如何给根节点添加设置? 可以传入prop [rootNode](api.md#rootnode)对象作为虚拟的根节点.
 ```js
 [{text: 'node 1'}, {text: 'node 2', children: [{text: 'node 2-1'}]}]
 ```
 
 可以通过树的[getPureTreeData](api.md#getpuretreedata)方法获取纯净数据(删除$开始的key).
-## 节点获取
+### 节点获取
 通过外部的`path`获取节点. [Path](api.md#path)是数组, 包括节点的父级的索引, 如`[0,0]`, 可以更改`path`和使用树的方法[getNodeByPath](api.md#getnodebypath)获得节点.
-## UI结构和css
+### UI结构和css
 ```pug
 .he-tree(data-tree-id={this.treeId})
   .tree-children.tree-root
@@ -45,8 +45,7 @@ import 'he-tree-vue/dist/he-tree-vue.css' // 基础样式
 上面是一个示例html结构. `tree-node-back`是一个全宽元素, 可以作为节点的全宽背景. 缩进靠js改变`tree-node-back`的`padding-left`实现, 所以不要用css修改`tree-node-back`的`padding-left`. 默认缩进20px, 传入prop `indent`可改变. 如果要修改节点垂直间距, 通过css修改`tree-node`的`margin-bottom`, 默认是5px. `tree-branch`的`data-tree-node-path`是节点`path`, 是为了方便通过html元素找节点对象.
 
 如果要添加css名和style给节点对应元素, 设置节点的[$xxxClass](api.md#xxxclass)和[$xxxStyle](api.md#xxxstyle). 可用的有: $branchClass, $nodeBackClass, $nodeClass, $childrenClass, $branchStyle, $nodeBackStyle, $nodeStyle, $childrenStyle
-## 使用
-如果你需要在多处使用, 你可以[创建一个自己的TreeView组件继承于此组件](##自定义使用).
+### 最简使用
 ```vue
 <!-- Demo1Easiest.vue -->
 <template>
@@ -129,7 +128,7 @@ export default {
 
 传入`foldingTransitionName`设置折叠/展开节点列表的transition名. 也可通过`foldingTransition`传入你的transition组件. 参考[Vue transition](https://cn.vuejs.org/v2/guide/transitions.html).
 
-如果数据在树初始化前传入, 可以配置`foldAllAfterMounted`将使树默认折叠. 如果数据在树初始化之后传入而想树默认折叠的话, 使用辅助方法[foldAll](api.md#foldall-2)如下:
+如果数据在树初始化前传入, 则配置`foldAllAfterMounted`将使树默认折叠. 如果数据在树初始化之后传入而想树默认折叠的话, 使用辅助方法[`foldAll`](api.md#foldall-2)如下:
 ```js
 import {foldAll} from 'he-tree-vue'
 ...
@@ -194,13 +193,13 @@ export default {
 [triggerClass](api.md#triggerclass) prop指定触发拖拽的元素的css名. 当在有`triggerClass`的元素内点击时, 除特殊情况, 将触发拖拽.
 特殊情况是, 点击的元素是输入框, 下拉框, 或该元素或其父元素有css名`undraggable`.
 
-`triggerClass`默认是`tree-node`, 所以点击节点内任何地方, 除特殊情况, 都可触发拖拽. 修改`triggerClass`, 可指定触发拖拽的元素. `triggerBySelf`可禁止子元素触发拖拽.
+`triggerClass`默认是`tree-node`, 所以点击节点内任何地方, 除特殊情况, 都可触发拖拽. 修改`triggerClass`, 可指定触发拖拽的元素.
 ### 拖拽流程中的控制
 prop [eachDraggable](api.md#eachdraggable), [eachDroppable](api.md#eachdroppable) 是钩子方法, 可以全局设定单个节点是否draggable, droppable. 单个节点可通过[$draggable](api.md#draggable-2), [$droppable](api.md#droppable-2)属性控制. $draggable, $droppable优先级高于eachDraggable, eachDroppable. 子节点会继承父级的$draggable, $droppable. 虚拟根节点对象[rootNode](api.md#rootnode)的$droppable指其他节点是否可成为根节点的子级.
 
 prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个钩子方法. ondragstart拖拽开始时触发, 返回`false`可阻止拖拽, `ondragstart`在源码中是在`eachDraggable`后面, 两个很类似. `ondragend`拖拽结束时触发, 返回`false`可阻止节点位置改变.
 
-流程中会触发一些事件, 事件不能影响流程, 钩子方法能影响流程. 开始时触发`drag`, 拖拽结束前触发`before-drop`. 拖拽改变了树的结构会触发`input`, `change`. 拖拽完成后触发`drop`.
+流程中会触发一些事件, 事件不能影响流程, 钩子方法能影响流程. 开始和结束时触发drag, drop. 拖拽改变了树的结构会触发input, change.
 
 ### 拖拽流程中的相关数据
 拖拽开始时, 会创建对象[store](api.md#store), 结束时销毁. 拖拽时有很多数据, 都会被放入`store`中. store会传给钩子函数和事件, 同时也可以通过`tree.treesStore.store`访问. 需要注意的是数据的生成顺序, 比如ondragstart发生时, store.targetTree就还不存在.
@@ -223,59 +222,6 @@ prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个�
 ### 拖拽时克隆 <Badge text="pro"></Badge>
 拖拽时不移动原节点而是克隆一个新节点. 使用prop [cloneWhenDrag](api.md#clonewhendrag)开启.
 
-## 边缘滚动
-这是属于拖拽插件的功能. 如果树处在一个滚动框中, 拖拽到其边缘时需要自动滚动. 此项默认关闭, 使用prop`edgeScroll`开启. 相关prop: [edgeScrollTriggerMargin](api.md#edgescrolltriggermargin), [edgeScrollSpeed](api.md#edgescrollspeed), [edgeScrollTriggerMode](api.md#edgescrolltriggermode).
-
-尝试拖动下面的节点到盒子边缘和页面边缘.
-<ClientOnly><Demo7EdgeScroll/></ClientOnly>
-
-```vue
-<!-- Demo7EdgeScroll.vue -->
-<template>
-  <div style="width:200px; height:200px; overflow: auto;">
-    <Tree :value="treeData" edgeScroll style="width:400px;"></Tree>
-  </div>
-</template>
-<script>
-import 'he-tree-vue/dist/he-tree-vue.css'
-import {Tree, Draggable} from 'he-tree-vue'
-
-export default {
-  components: {Tree: Tree.mixPlugins([Draggable])},
-  data() {
-    return {
-      treeData: [{text: 'node 1'}, {text: 'node 2', children: [{text: 'node 2-1'}]}, {text: 'node 3'}, {text: 'node 4'}, {text: 'node 5'}, {text: 'node 6'}]
-    }
-  },
-}
-</script>
-```
-
-## RTL 从右往左显示与拖动
-使用prop `rtl`控制.
-<ClientOnly><Demo8RTL/></ClientOnly>
-
-```vue
-<!-- Demo8RTL.vue -->
-<template>
-  <Tree :value="treeData" rtl></Tree>
-</template>
-<script>
-import 'he-tree-vue/dist/he-tree-vue.css'
-import {Tree, Draggable} from 'he-tree-vue'
-
-export default {
-  components: {Tree: Tree.mixPlugins([Draggable])},
-  data() {
-    return {
-      treeData: [{text: 'node 1'}, {text: 'node 2', children: [{text: 'node 2-1'}]}, {text: 'node 3'}, {text: 'node 4'}, {text: 'node 5'}, {text: 'node 6'}]
-    }
-  },
-}
-</script>
-```
-
-
 ## 自定义使用
 一般来说, 项目中的树会有一些自定义UI. 所以需要创建一个自己的`Treeview`组件继承于基础树, 启用需要的插件, 自定义UI, 添加样式. 添加样式时可通过data [treeClass](api.md#treeclass)设置根元素的css名, 再通过嵌套css更改样式.
 
@@ -294,7 +240,7 @@ export default {
 ### 自定义css
 内置样式很少, 并采用两层嵌套结构. 所以自定义css时也要使用两层嵌套结构.
 ```css
-.my-tree-view .tree-node{}
+.he-tree .tree-node{}
 ```
 ## Vuex
 由于树会改变原数据对象, 所以使用vuex时, 可先用[cloneTreeData](api.md#clonetreedata)方法深度复制数据对象, 再把复制的对象传给树. 在树的input或change事件中使用[tree.getPureTreeData](api.md#getpuretreedata)方法获得纯净数据, 再手动更新数据.
@@ -308,7 +254,6 @@ export default {
 <script type="text/javascript">
   var Tree = heTreeVue.Tree;
   var Fold = heTreeVue.Fold;
-  ...
 </script>
 ```
 

@@ -1,4 +1,4 @@
-# API
+# API <Badge text="v1"></Badge>
 ## 基础树
 ## props
 ### value
@@ -9,10 +9,6 @@
 ### indent
 * type: Number, default: 20
 * 详细: 缩进, 单位是px
-
-### rtl
-* type: boolean
-* 详细: 支持从右往左的显示和拖拽.
 
 ### rootNode
 * type: [Node](#node), default: {}
@@ -219,10 +215,6 @@
 * type: String, default: 'tree-node'
 * 详细: 触发拖拽的元素的class.
 
-### triggerBySelf
-* type: Boolean, default: false
-* 详细: 阻止子元素触发拖拽.
-
 ### draggable
 * type: [Boolean, (tree: [Tree](#tree), store: [Store](#store)) => [IsDraggable](#isdraggable)], default: true
 * 详细: 启用该树的drag功能
@@ -263,22 +255,6 @@
 * type: 'top_left_corner'|'mouse', default: 'top_left_corner'
 * 详细: 如何定位拖拽节点. top_left_corner: 拖拽节点左上角; mouse: 鼠标位置
 
-### edgeScroll
-* type: Boolean
-* 详细: 启用边缘滚动
-
-### edgeScrollTriggerMargin
-* type: Number, default: 50
-* 详细: 边缘滚动触发的距离.
-
-### edgeScrollSpeed
-* type: Number, default: 0.35
-* 详细: 边缘滚动触发的速度.
-
-### edgeScrollTriggerMode
-* type: 'top_left_corner'|'mouse', default: 'top_left_corner'
-* 详细: 如何触发边缘滚动. top_left_corner: 拖拽节点左上角触发; mouse: 鼠标位置触发
-
 ### crossTree <Badge text="pro"></Badge>
 * type: [Boolean, Function], default: false
   * Function: (tree: [Tree](#tree), store: [Store](#store)) => Boolean
@@ -318,9 +294,6 @@
 ### drag
 * 类型: (store: [Store](#store))
 
-### before-drop
-* 类型: (store: [Store](#store))
-
 ### drop
 * 类型: (store: [Store](#store))
 
@@ -328,7 +301,7 @@
 * 类型: (treeData: [TreeData](#treedata))
 
 ### change
-* 类型: (store: [Store](#store))
+* 类型: ()
 
 ### afterPlaceholderCreated
 * 类型: (store: [Store](#store))
@@ -392,12 +365,9 @@
 
 ### Store
 * 类型: Object
-  * {HTMLElement} listenerElement: 监听事件的元素
-  * {HTMLElement} directTriggerElement: 直接触发事件的元素
-  * {HTMLElement} triggerElement: 允许作为拖拽触发器的元素. 可能是directTriggerElement的父级.
-  * {HTMLElement} movedElement: 拖动的元素
-  * {HTMLElement} movedOrClonedElement: 原始拖动的元素, 克隆模式时有用
-  * {Object: {x, y}} mouse: 鼠标位置, 相对于视窗左上角
+  * {HTMLElement} el: 拖动的元素
+  * {HTMLElement} originalEl: 原始拖动的元素, 克隆模式时有用
+  * {Object: {x, y}} mouse: 鼠标位置
   * {Number} movedCount: 移动次数
   * {Event} startEvent: mousedown 或 touchstart 事件
   * {Event} endEvent: mouseup 或 touchend event 事件

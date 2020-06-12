@@ -77,7 +77,7 @@ export default {
     },
     //
     add() {
-      this.treeData.push({text: `node ${hp.strRand(3).toLowerCase()}`})
+      this.treeData.push({text: `node ${hp.randString(3).toLowerCase()}`})
     },
     showHidden() {
       this.walkTreeData((node) => {
