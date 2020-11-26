@@ -279,6 +279,18 @@
 * type: 'top_left_corner'|'mouse', default: 'top_left_corner'
 * 详细: 如何触发边缘滚动. top_left_corner: 拖拽节点左上角触发; mouse: 鼠标位置触发
 
+### edgeScrollSpecifiedContainerX
+* type: HTMLElement | (store) => HTMLElement
+* 详细: 指定触发横向边缘滚动的父级元素
+
+### edgeScrollSpecifiedContainerY
+* type: HTMLElement | (store) => HTMLElement
+* 详细: 指定触发纵向边缘滚动的父级元素
+
+### preventTextSelection
+* type: type: Boolean, default: true
+* 详细: 阻止拖动时文字被选中. 将会在部分事件中执行event.preventDefault()
+
 ### crossTree <Badge text="pro"></Badge>
 * type: [Boolean, Function], default: false
   * Function: (tree: [Tree](#tree), store: [Store](#store)) => Boolean
@@ -332,6 +344,10 @@
 
 ### afterPlaceholderCreated
 * 类型: (store: [Store](#store))
+
+### after-move
+* 类型: (store: [Store](#store))
+* 详细: 每次mousemove或touchmove事件后执行
 
 ## 工具方法
 ### cloneTreeData

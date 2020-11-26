@@ -276,6 +276,18 @@ Special properties of nodes in this plugin.
 * Type: 'top_left_corner'|'mouse', default: 'top_left_corner'
 * Detail: How to trigger edge scroll. top_left_corner: triggered by the top left corner; mouse: triggered by the mouse position.
 
+### edgeScrollSpecifiedContainerX
+* Detail: HTMLElement | (store) => HTMLElement
+* Detail: Specify the parent element that triggers horizontal edge scrolling
+
+### edgeScrollSpecifiedContainerY
+* type: HTMLElement | (store) => HTMLElement
+* Detail: Specify the parent element that triggers vertical edge scrolling
+
+### preventTextSelection
+* type: type: Boolean, default: true
+* Detail: Prevent the text from being selected while dragging. It will execute `event.preventDefault()` in some events.
+
 ### crossTree <Badge text="pro"></Badge>
 * Type: [Boolean, Function], default: false
   * Function: (tree: [Tree](#tree), store: [Store](#store)) => Boolean
@@ -328,6 +340,10 @@ Special properties of nodes in this plugin.
 
 ### afterPlaceholderCreated
 * Type: (store: [Store](#store))
+
+### after-move
+* Type: (store: [Store](#store))
+* Detail: after each `mousemove` or `touchmove` event
 
 ## Utils
 ### cloneTreeData
