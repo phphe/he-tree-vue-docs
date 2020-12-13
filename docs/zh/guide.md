@@ -1,7 +1,12 @@
 # 教程
 ## 安装
+如果你使用Vue3
 ```sh
-npm i -P he-tree-vue
+npm i -P he-tree-vue@3
+```
+如果你使用Vue2
+```sh
+npm i -P he-tree-vue@2
 ```
 [通过script标签引入](#通过script标签引入)
 

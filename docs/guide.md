@@ -1,7 +1,12 @@
 # Guide
 ## Installation
+If you use Vue3
 ```sh
-npm i -P he-tree-vue
+npm i -P he-tree-vue@3
+```
+If you use Vue2
+```sh
+npm i -P he-tree-vue@2
 ```
 [Import by script tag](#import-by-script-tag)
 
