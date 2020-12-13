@@ -213,7 +213,7 @@ Some events are triggered in the process. Events cannot affect the process. Hook
 At the beginning of the drag, an object [store](api.md#store) is created, and it is destroyed at the end. There is a lot of data when dragging, and it will be put in the `store`. The store will be passed to hook functions and events. It also can be accessed through `tree.treesStore.store`. Note when a property exists in `store`, such as when ondragstart excuting, store.targetTree does not yet exist.
 
 ### Placeholder
-When dragging, an element will be generated with a default light cyan background to identify the place where can be dropped. This node will emit `afterPlaceholderCreated` event when it is created. If you want to manipulate this element such as adding text, you can only use native JS operations.
+When dragging, an element will be generated with a default light cyan background to identify the place where can be dropped. This node will emit `after-placeholder-created` event when it is created. If you want to manipulate this element such as adding text, you can only use native JS operations.
 
 ### Open folded node when dragging
 When dragging a node over a collapsed node, this node is opened by default for dragging into it. It can be controlled by prop `unfoldWhenDragover`. Related prop: [unfoldWhenDragoverDelay](api.md#unfoldwhendragoverdelay)

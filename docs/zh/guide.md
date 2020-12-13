@@ -211,7 +211,7 @@ prop [ondragstart](api.md#ondragstart)和[ondragend](api.md#ondragend)是两个�
 拖拽开始时, 会创建对象[store](api.md#store), 结束时销毁. 拖拽时有很多数据, 都会被放入`store`中. store会传给钩子函数和事件, 同时也可以通过`tree.treesStore.store`访问. 需要注意的是数据的生成顺序, 比如ondragstart发生时, store.targetTree就还不存在.
 
 ### 占位节点
-拖拽时, 会生成一个元素默认淡青色背景, 用以标识可放置的位置. 此节点生成时会触发`afterPlaceholderCreated`, 如果想操作此元素比如添加文字, 只能通过原生js操作.
+拖拽时, 会生成一个元素默认淡青色背景, 用以标识可放置的位置. 此节点生成时会触发`after-placeholder-created`, 如果想操作此元素比如添加文字, 只能通过原生js操作.
 
 ### 拖拽时打开折叠节点
 当把节点拖动到一个折叠节点上时, 默认会打开此节点以便拖入其中. 可通过prop `unfoldWhenDragover`控制. 相关prop: [unfoldWhenDragoverDelay](api.md#unfoldwhendragoverdelay)

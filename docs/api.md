@@ -195,9 +195,13 @@ Special properties of nodes in this plugin.
 * Type: () => undefined
 
 ## events
-### nodeFoldedChanged
+### node-folded-changed
 * Type: (node: [Node](#node))
 * Detail: Triggered when node is folded or unfolded.
+
+### nodeFoldedChanged
+* Type: (node: [Node](#node))
+* Detail: Alias of `node-folded-changed`. Will be deprecated.
 
 ## Check Plugin
 ## methods
@@ -338,8 +342,12 @@ Special properties of nodes in this plugin.
 ### change
 * Type: (store: [Store](#store))
 
+### after-placeholder-created
+* Type: (store: [Store](#store))
+
 ### afterPlaceholderCreated
 * Type: (store: [Store](#store))
+* Detail: Alias of `after-placeholder-created`. Will be deprecated.
 
 ### after-move
 * Type: (store: [Store](#store))

@@ -197,9 +197,13 @@
 * 详细: 打开所有节点.
 
 ## events
-### nodeFoldedChanged
+### node-folded-changed
 * 类型: (node: [Node](#node))
 * 详细: 节点被打开或折叠.
+
+### nodeFoldedChanged
+* 类型: (node: [Node](#node))
+* 详细: `node-folded-changed`的别名. 将来会被弃用.
 
 ## 勾选框插件
 ## methods
@@ -342,8 +346,12 @@
 ### change
 * 类型: (store: [Store](#store))
 
+### after-placeholder-created
+* 类型: (store: [Store](#store))
+
 ### afterPlaceholderCreated
 * 类型: (store: [Store](#store))
+* 详细: `after-placeholder-created`的别名, 将来会被弃用.
 
 ### after-move
 * 类型: (store: [Store](#store))
