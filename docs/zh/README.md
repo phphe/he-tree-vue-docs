@@ -17,7 +17,9 @@ editLink: false
 ## 许可证
 he-tree-vue使用[MIT](http://opensource.org/licenses/MIT)许可, 保留版权即可自由使用. 如果您需要高级功能, [需购买插件he-tree-vue-pro](buy_pro.md).
 
-## Version & Branch
+## Vue 3
+Vue3版本经测试支持Vue-CLI创建的项目. 也可以在**Vite**下使用.
+
 对于npmjs.com, `he-tree-vue@2`支持vue 2, `he-tree-vue@3`支持 vue 3. 详见[安装](guide.html#安装).
 
 在github.com, `master`分支(即主分支)属于vue 2, `vue3`分支属于vue 3.
