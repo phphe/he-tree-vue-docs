@@ -4,9 +4,6 @@ editLink: false
 # Buy Pro
 he-tree-vue follows the MIT license and you can use it for free. he-tree-vue-pro is commercial plugin and contains several advanced features: cross-tree dragging, maximum level, clone when dragging. If you need, please purchase he-tree-vue-pro. Please fill in your email and name when you purchase, once you purchase, the relevant documents will be sent to you within 24 hours. You can also receive new versions in the future.
 
-Some customers report that they did not receive the first email. You can <a href="mailto:phphe@outlook.com?
-		subject=he-tree-vue-pro purchased&body=Please send it to me as soon as possible.">click here</a> to send me an email first when you purchased, and then I will reply to you.
-
 ## Licenses
 ### Regular License
 * Number of final products: **1**
@@ -31,6 +28,19 @@ Some customers report that they did not receive the first email. You can <a href
 <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/zh_XC/i/scr/pixel.gif" width="1" height="1">
 </form>
+
+Some customers report that they did not receive the first email. You can <a href="mailto:phphe@outlook.com?subject=he-tree-vue-pro purchased&body=Please send it to me as soon as possible.">click here</a> to send me an email first when you purchased, and then I will reply to you.
+
+## Buy with Email
+You can click follow links to send me a email, then I will send invoice mail back. 
+* <a href="mailto:phphe@outlook.com?subject=Buy he-tree-vue-pro license&body=I want to buy Regular License.">Buy Regular License</a>
+* <a href="mailto:phphe@outlook.com?subject=Buy he-tree-vue-pro license&body=I want to buy Extended License.">Buy Extended License</a>
+
+## Buy through other way
+Please <a href="mailto:phphe@outlook.com?subject=&body=">contact me</a> by email.
+
+## Hire me
+I can work on the custom made of he-tree-vue. Advanced Vue custom components. And other work about Vue. Please <a href="mailto:phphe@outlook.com?subject=&body=">contact me</a> by email.
 
 ## Contact
 * Email: phphe@outlook.com
