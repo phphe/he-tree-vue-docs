@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   base: '/',
-  theme: 'antdocs',
   themeConfig: {
     repo: 'phphe/he-tree-vue',
     docsRepo: 'phphe/he-tree-vue-docs',
