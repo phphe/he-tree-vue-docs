@@ -17,6 +17,6 @@ git commit -m 'deploy'
 git commit -m 'rebuild pages' --allow-empty
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:phphe/he-tree-vue-docs.git master:gh-pages
+git push -f git@github.com:phphe/he-tree-vue-docs.git main:gh-pages
 
 cd -
