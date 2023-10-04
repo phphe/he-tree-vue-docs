@@ -84,10 +84,26 @@ module.exports = {
   },
   plugins: [
     [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'G-7876M7VJS1'
-      }
+      // '@vuepress/google-analytics',
+      // {
+      //   'ga': 'G-7876M7VJS1'
+      // }
     ]
+  ],
+  head: [
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-7876M7VJS1',
+      },
+    ],
+    [
+      'script',
+      {},
+      [
+        "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-7876M7VJS1');",
+      ],
+    ],
   ],
 }
