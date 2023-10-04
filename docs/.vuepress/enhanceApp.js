@@ -1,3 +1,5 @@
+import { DialogAlert } from 'v-dialogs'
+
 export default ({ router }) => {
   // fix Initial load does not scroll to the heading referenced by the document hash
   // refer:
@@ -9,6 +11,7 @@ export default ({ router }) => {
       const { app } = router;
 
       app.$once("hook:mounted", () => {
+        // scroll to hash
         setTimeout(() => {
           const { hash } = document.location;
           if (hash.length > 1) {
@@ -23,6 +26,18 @@ export default ({ router }) => {
             }
           }
         }, 500);
+        // 
+        let name = `ignore_version_tips`
+        let ignore = sessionStorage.getItem(name)
+        if (!ignore) {
+          DialogAlert('This is an old version. Do you want to check out the new version?', () => {
+            window.location.href = 'https://hetree.phphe.com'
+          }, {
+            messageType: 'confirm', language: 'en', title: 'Alert', cancelCallback: () => {
+              sessionStorage.setItem(name, 'true')
+            }
+          })
+        }
       });
     });
   }
