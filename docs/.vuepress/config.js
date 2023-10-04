@@ -20,9 +20,9 @@ module.exports = {
           '/migration_guide',
         ],
         nav: [
-          {text: 'Guide',link: '/guide'},
-          {text: 'API',link: '/api'},
-          {text: 'Buy Pro',link: '/buy_pro'},
+          { text: 'Guide', link: '/guide' },
+          { text: 'API', link: '/api' },
+          { text: 'Buy Pro', link: '/buy_pro' },
           // {text: 'Donate',link: '/donate'},
           // {text: 'Blog',link: 'https://phphe.com'},
           {
@@ -47,9 +47,9 @@ module.exports = {
           '/zh/migration_guide',
         ],
         nav: [
-          {text: '教程',link: '/zh/guide'},
-          {text: 'API',link: '/zh/api'},
-          {text: '购买Pro',link: '/zh/buy_pro'},
+          { text: '教程', link: '/zh/guide' },
+          { text: 'API', link: '/zh/api' },
+          { text: '购买Pro', link: '/zh/buy_pro' },
           // {text: '打赏',link: '/zh/donate'},
           // {text: '博客',link: 'https://phphe.com'},
           {
@@ -86,7 +86,7 @@ module.exports = {
     [
       '@vuepress/google-analytics',
       {
-        'ga': 'UA-155723570-1' // UA-00000000-0
+        'ga': 'G-7876M7VJS1'
       }
     ]
   ],
