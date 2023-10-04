@@ -28,7 +28,7 @@ export default ({ router }) => {
         let name = `ignore_version_tips`
         let ignore = sessionStorage.getItem(name)
         if (!ignore) {
-          import('./DialogAlert.js').then((DialogAlert) => {
+          import('./DialogAlert.js').then(({ DialogAlert }) => {
             console.log(DialogAlert);
             DialogAlert('This is an old version. Do you want to check out the new version?', () => {
               window.location.href = 'https://hetree.phphe.com'
