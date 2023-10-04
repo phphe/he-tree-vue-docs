@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{339:function(e,t,n){"use strict";n.r(t);n(248);var a={components:{Tree:n(249).d},data:()=>({treeData:[{text:"node 1"},{text:"node 2",children:[{text:"node 2-1"}]}]})},o=n(15),r=Object(o.a)(a,(function(){return(0,this._self._c)("Tree",{attrs:{value:this.treeData}})}),[],!1,null,null,null);t.default=r.exports}}]);
