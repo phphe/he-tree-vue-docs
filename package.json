@@ -3,8 +3,8 @@
   "version": "1.0.2",
   "description": "",
   "scripts": {
-    "build": "vuepress build docs",
-    "dev": "vuepress dev docs"
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider & vuepress build docs",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider & vuepress dev docs"
   },
   "author": "phphe <phphe@outlook.com> (https://github.com/phphe)",
   "bugs": {

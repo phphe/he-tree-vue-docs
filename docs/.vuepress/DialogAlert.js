@@ -1,0 +1,1 @@
+export { DialogAlert } from 'v-dialogs'
